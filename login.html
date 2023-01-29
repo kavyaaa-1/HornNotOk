@@ -37,24 +37,24 @@
                     <img src="https://e7.pngegg.com/pngimages/421/879/png-clipart-twitter-logo-social-media-iphone-organization-logo-twitter-computer-network-leaf.png">
                 </div>
                 <form id="login" class="input-group">
-                    <input type="text" class="input-field" placeholder="User ID" required>
-                    <input type="text" class="input-field" placeholder="Enter Password" required>
+                    <input type="text" class="input-field" placeholder="User Name" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
                     <button type="submit" class="submit-btn">Log In</button>
                 </form>
-                <form id="register" class="input-group">
-                    <input type="text" class="input-field" placeholder="User ID" required>
-                    <input type="email" class="input-field" placeholder="Email ID" required>
-                    <input type="text" class="input-field" placeholder="Enter Password" required>
-                    <input type="text" class="input-field" placeholder="Enter your age" required>
+                <form id="register" class="input-group" action="insert.php" method="POST">
+                    <input type="text" class="input-field" name = "username" placeholder="User Name" required>
+                    <input type="email" class="input-field" name = "email" placeholder="Email ID" required>
+                    <input type="password" class="input-field" name = "password" placeholder="Enter Password" required>
+                    <input type="text" class="input-field" name = "age" placeholder="Enter your age" required>
                     <h5>Any Medical Issues: </h5>
-                    <select name="Medical Conditions" id="Medical Conditions" style="width:120px;">
-                        <option value="hyperacusis">Hyperacusis</option>
+                    <select name="medical_condition" id="Medical Conditions" style="width:120px;">
+                        <option value="none">None</option>
                         <option value="tinnitus">Tinnitus</option>
                         <option value="post traumatic disorder">Post Traumatic Disorder</option>
                         <option value="cardiovascular diseases">Cardiovascular Diseases</option>
-                        <option value="none">None</option>
+                        <option value="hyperacusis">Hyperacusis</option>
                     </select>    
-                    <button type="submit" class="submit-btn-2">Register</button>
+                    <input type="submit" class="submit-btn-2" value ="Submit" name ="submit">
                 </form>
             </div>
         </div>
@@ -73,10 +73,7 @@
         function login(){
             x.style.left="500px";
             y.style.left = "-500px"
-
-    
         }
     </script>
-    
 </body>
 </html>
